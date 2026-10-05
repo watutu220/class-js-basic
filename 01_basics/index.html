@@ -12,6 +12,8 @@
     <p>開発者ツールのConsole（コンソール）を開いて結果を確認してください。</p>
     <script>
 
+        // 3:基本文法
+
         // スラッシュは、単体
         /* アスタリスクで、複数 */
         console.log('js!', '123');
@@ -19,14 +21,99 @@
         console.table(['りんご', 'みかん', 'バナナ']);
         console.log('Hello JavaScript!');
 
-        // 変数
+
+        // 4:変数
+
         let name = 'sekiguchi';
         // let name = 'takagi'; 再設定はエラー。
         console.log(name);
 
-        /*エラー例
+        /*　エラー例
         ・SyntaxError: Missing initializer in const declaration（定数の初期化忘れエラー）
         ・TypeError: Assignment to constant variable.（定数への再代入エラー）*/
+
+        // 複数同時宣言(カンマ)
+        let userName = 'takagi',
+            userAge = 39,
+            userJob = '講師';
+
+
+        // 5:演算子
+
+        console.log(6 + 9);   // 結果：15
+        console.log(10 - 15); // 結果：-5
+        console.log(3 * 7);   // 結果：21
+        console.log(10 / 5);  // 結果：2
+        console.log(7 % 3);   // 結果：1（7÷3 = 2 あまり 1）
+        console.log(3 ** 2);  // 結果：9（3の2乗 = 3×3）
+
+        //変数を使った演算
+        let x = 1;
+
+        console.log(userJob); // 講師
+
+        x = x + 1; // 変数xの値(1)に1を足して、変数xに再代入する
+        console.log(x); // 2
+
+        x = x * 3; // 変数xの値(2)に3を掛けて、変数xに再代入する
+        console.log(x); // 6
+
+        // 自己代入演算
+        let score = 100;
+        score += 20; // score = score + 20 と同じ
+        console.log(score); // 120
+
+        score -= 50; // score = score - 50 と同じ
+        console.log(score); // 70
+
+        // プラマイの略
+        let count = 0;
+        count++; // 値を1増やす
+        console.log(count); // 1
+
+        count++; // さらに1増やす
+        console.log(count); // 2
+
+        count--; // 値を1減らす
+        console.log(count); // 1
+
+
+        // 6:データ型
+
+        console.log(typeof 'Hello'); // "string"
+        console.log(typeof 100);     // "number"
+        console.log(typeof true);    // "boolean"
+
+        /* 文字列同士は、プラス（+）を使って結合できる */
+        console.log('sekiguchi' + 'tutu'); // "takagihirotaka"
+
+        /* 文字列と数値を結合すると、数値は文字列に変換される */
+        console.log(10 + 'px'); // "10px"
+
+        /* 文字列と変数を結合すると、変数の値が埋め込まれる */
+        let val = 1;
+        console.log('url(' + val + '.png)'); // "url(1.png)"
+
+        /* 数値と数値を結合すると、加算（計算）になる */
+        console.log(20 + 10); // 30
+
+        // :テンプレートリテラル
+
+        const person = 'JS太郎';
+        const points = 120;
+
+        // 昔の書き方（+で繋ぐ：クォーテーションのミスが起きやすい）
+        console.log('こんにちは、' + person + 'さん！ 現在のポイントは ' + points + 'pt です。');
+
+        // 現代の書き方（テンプレートリテラル）
+        console.log(`こんにちは、${person}さん！ 現在のポイントは ${points}pt です。`);
+
+        // 式の埋め込み
+        console.log(`2 + 5 equal ${2 + 5}`); // "2 + 5 equal 7"
+
+        // 改行の維持
+        console.log(`Hello
+        world`);
 
     </script>
 </body>
