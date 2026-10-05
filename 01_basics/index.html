@@ -11,12 +11,23 @@
     <h1>JavaScript基礎</h1>
     <p>開発者ツールのConsole（コンソール）を開いて結果を確認してください。</p>
     <script>
+
         // スラッシュは、単体
         /* アスタリスクで、複数 */
         console.log('js!', '123');
         console.warn('warn');
         console.table(['りんご', 'みかん', 'バナナ']);
         console.log('Hello JavaScript!');
+
+        // 変数
+        let name = 'sekiguchi';
+        // let name = 'takagi'; 再設定はエラー。
+        console.log(name);
+
+        /*エラー例
+        ・SyntaxError: Missing initializer in const declaration（定数の初期化忘れエラー）
+        ・TypeError: Assignment to constant variable.（定数への再代入エラー）*/
+
     </script>
 </body>
 
