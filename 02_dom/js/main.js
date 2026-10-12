@@ -54,20 +54,20 @@ const title = document.querySelector('#main-title');
 
 // console.log(document.documentElement);
 
-// クラス名で取得（CSSと同じく . が必要）
-const introText = document.querySelector('#intro');
-console.log(themeTitle.innerHTML);
+// // クラス名で取得（CSSと同じく . が必要）
+// const introText = document.querySelector('#intro');
+// console.log(themeTitle.innerHTML);
 
-const day = 12;
-const week = '月曜日';
+// const day = 12;
+// const week = '月曜日';
 
-introText.innerHTML = `今日は${day}日の<br>${week}です。`;
+// introText.innerHTML = `今日は${day}日の<br>${week}です。`;
 
 // タグ名で取得
 const heading = document.querySelector('h1');
 
 // 1. テキストを読み取る（参照）
-console.log(mainTitle.textContent); // "JavaScriptで画面を動かそう"
+console.log(themeTitle.textContent); // "JavaScriptで画面を動かそう"
 
-// 2. 新しいテキストで上書きする（代入）
-mainTitle.textContent = 'yawora404';
+// // 2. 新しいテキストで上書きする（代入）
+// themeTitle.textContent = 'yawora404';
